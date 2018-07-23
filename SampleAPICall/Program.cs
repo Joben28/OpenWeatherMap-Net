@@ -10,7 +10,7 @@ namespace SampleAPICall
     {
         private static void Main(string[] args)
         {
-            var openWeather = new OpenWeatherMap("43d7bf8354d77430de20a20744daa908", Units.Imperial);
+            var openWeather = new OpenWeatherMap("TOKEN HERE", Units.Imperial);
 
             Console.WriteLine("Press any key to get forecast data...");
             Console.ReadKey();
