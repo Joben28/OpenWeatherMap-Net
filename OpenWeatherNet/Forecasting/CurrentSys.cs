@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OpenWeatherNet.Forecasting
 {
-    public partial class DaySys
+    public sealed class CurrentSys
     {
         [JsonProperty("type")]
         public long Type { get; set; }

@@ -9,7 +9,10 @@ using System.Threading.Tasks;
 
 namespace OpenWeatherNet.Forecasting
 {
-    public partial class DayForecast : Forecast
+    /// <summary>
+    /// Current weather for the geo graphical area.
+    /// </summary>
+    public sealed class CurrentWeather : ForecastBase
     {
         /// <summary>
         /// City geo location by lattitude & longitude.
@@ -27,7 +30,7 @@ namespace OpenWeatherNet.Forecasting
         /// Forecast measurements (Temperature, Humidity, etc.)
         /// </summary>
         [JsonProperty("main")]
-        public DayMeasurements DayMeasurements { get; set; }
+        public CurrentMeasurements DayMeasurements { get; set; }
 
         /// <summary>
         /// Wind conditions.
@@ -51,7 +54,7 @@ namespace OpenWeatherNet.Forecasting
         /// Information regarding sunrise/sunset.
         /// </summary>
         [JsonProperty("sys")]
-        public DaySys Sys { get; set; }
+        public CurrentSys Sys { get; set; }
 
         /// <summary>
         /// City id.

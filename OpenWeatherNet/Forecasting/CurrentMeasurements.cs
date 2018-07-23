@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OpenWeatherNet.Forecasting
 {
-    public partial class DayMeasurements
+    public sealed class CurrentMeasurements
     {
         /// <summary>
         /// Temperature in units of Kelvin. 

@@ -2,7 +2,7 @@
 
 namespace OpenWeatherNet.Forecasting
 {
-    public partial class WeekMeasurements
+    public sealed class ForecastMeasurements
     {
         /// <summary>
         /// Temperature in units of Kelvin. 

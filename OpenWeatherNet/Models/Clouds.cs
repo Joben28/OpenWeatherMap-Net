@@ -2,7 +2,7 @@
 
 namespace OpenWeatherNet.Models
 {
-    public partial class Clouds
+    public sealed class Clouds
     {
         /// <summary>
         /// Cloudiness in %.

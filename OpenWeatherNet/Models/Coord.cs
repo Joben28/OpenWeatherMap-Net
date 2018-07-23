@@ -2,7 +2,7 @@
 
 namespace OpenWeatherNet.Models
 {
-    public partial class Coord
+    public sealed class Coord
     {
         /// <summary>
         /// City geo location, latitude.

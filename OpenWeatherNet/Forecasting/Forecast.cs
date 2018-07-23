@@ -7,7 +7,7 @@ namespace OpenWeatherNet.Forecasting
     /// <summary>
     /// Weather forecast for 5 days with data every 3 hours.
     /// </summary>
-    public partial class WeekForecast : Forecast
+    public sealed class Forecast : ForecastBase
     {
         ///<summary>
         /// Internal 'code' parameter.
@@ -32,7 +32,7 @@ namespace OpenWeatherNet.Forecasting
         /// Collection of 5 day / 3 hour forecast data.
         /// </summary>
         [JsonProperty("list")]
-        public WeekData[] ForecastCollection { get; set; }
+        public ForecastWeather[] ForecastCollection { get; set; }
 
         ///<summary>
         /// City of the forecast data.

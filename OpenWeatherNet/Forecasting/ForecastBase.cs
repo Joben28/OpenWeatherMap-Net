@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenWeatherNet
+namespace OpenWeatherNet.Forecasting
 {
-    public abstract class Forecast
+    public abstract class ForecastBase
     {
         /// <summary>
         /// Gets Forecast object for json string.

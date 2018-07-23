@@ -3,7 +3,7 @@ using OpenWeatherNet.Converters;
 
 namespace OpenWeatherNet.Models
 {
-    public partial class Weather
+    public sealed class Weather
     {
         /// <summary>
         /// Weather condition id.

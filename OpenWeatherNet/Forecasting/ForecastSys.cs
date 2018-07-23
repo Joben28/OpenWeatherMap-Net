@@ -3,7 +3,7 @@ using OpenWeatherNet.Models;
 
 namespace OpenWeatherNet.Forecasting
 {
-    public partial class WeekSys
+    public sealed class ForecastSys
     {
         /// <summary>
         /// Part of day, day & night.

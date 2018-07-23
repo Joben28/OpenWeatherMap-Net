@@ -2,7 +2,7 @@
 
 namespace OpenWeatherNet.Models
 {
-    public partial class Rain
+    public sealed class Rain
     {
         /// <summary>
         /// Rain/Snow volume for last 3 hours in milimeters.

@@ -7,7 +7,7 @@ namespace OpenWeatherNet.Forecasting
     /// <summary>
     /// Forecast data containing date time, weather, and measurement information.
     /// </summary>
-    public partial class WeekData
+    public sealed class ForecastWeather
     {
         /// <summary>
         /// Time of data forecasted, unix, UTC.
@@ -19,7 +19,7 @@ namespace OpenWeatherNet.Forecasting
         /// Forecast measurements (Temperature, Humidity, etc.)
         /// </summary>
         [JsonProperty("main")]
-        public WeekMeasurements Measurements { get; set; }
+        public ForecastMeasurements Measurements { get; set; }
 
         /// <summary>
         /// Weather conditions.
@@ -58,6 +58,6 @@ namespace OpenWeatherNet.Forecasting
         public DateTimeOffset DtTxt { get; set; }
 
         [JsonProperty("sys")]
-        public WeekSys Sys { get; set; }
+        public ForecastSys Sys { get; set; }
     }
 }

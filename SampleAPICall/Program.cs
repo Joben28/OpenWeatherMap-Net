@@ -10,17 +10,21 @@ namespace SampleAPICall
     {
         private static void Main(string[] args)
         {
-            var openWeather = new OpenWeatherMap("TOKEN HERE");
+            var openWeather = new OpenWeatherMap("43d7bf8354d77430de20a20744daa908", Units.Imperial);
 
             Console.WriteLine("Press any key to get forecast data...");
             Console.ReadKey();
 
-            var dayForecast = openWeather.GetForecastByZipCode<DayForecast>("20439", "us");
-            Console.WriteLine(dayForecast.Weather[0].Description);
+            var currentWeather = openWeather.ByZipCode<CurrentWeather>("20439", "us").Result;
+            Console.WriteLine(currentWeather.Weather[0].Description);
             Console.ReadKey();
 
-            var weekForecast = openWeather.GetForecastByZipCode<WeekForecast>("20439", "us");
-            Console.WriteLine(weekForecast.ForecastCollection[0].Weather[0].Description);
+            var forecast = openWeather.ByZipCode<Forecast>("20439", "us").Result;
+            Console.WriteLine(forecast.ForecastCollection[0].Weather[0].Description);
+            Console.ReadKey();
+
+            var temp = currentWeather.DayMeasurements.Temp;
+            Console.WriteLine(temp);
 
 
             Console.ReadKey();

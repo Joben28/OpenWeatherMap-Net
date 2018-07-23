@@ -2,7 +2,7 @@
 
 namespace OpenWeatherNet.Models
 {
-    public partial class City
+    public sealed class City
     {
         /// <summary>
         /// City ID.
